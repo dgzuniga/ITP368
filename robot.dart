@@ -3,16 +3,16 @@
 import "package:flutter/material.dart";
 
 void main2()
-{ runApp(Robot());
+{ runApp(const Robot());
 }
 
 class Robot extends StatelessWidget
 {
-  Robot({super.key});
+  const Robot({super.key});
 
   @override
   Widget build(BuildContext context)
-  { return MaterialApp
+  { return const MaterialApp
     ( title: "Robot",
       home: RobotHome(),
     );
@@ -21,6 +21,8 @@ class Robot extends StatelessWidget
 
 class RobotHome extends StatefulWidget
 {
+  const RobotHome({super.key});
+
   @override
   State<RobotHome> createState() => RobotHomeState();
 }
@@ -56,16 +58,16 @@ class RobotHomeState extends State<RobotHome>
   { 
     // grid2 is build by loop here, included in widget
     // tree later.
-    Column grid2 = Column(children:[]);
+    Column grid2 = const Column(children:[]);
     for ( int y = 0; y<5; y++ )
-    { Row arow = Row(children:[]);
+    { Row arow = const Row(children:[]);
       for( int x=0; x<5; x++ )
       {
         String display;
         // Current spot should display R
-        if (x == initialRobotX && y == initialRobotY) 
+        if (x == initialRobotX && y == initialRobotY) {
           display = "R";
-        else {
+        } else {
           display = "";
         } 
         arow.children.add( TextWithBorder(display) );
@@ -75,7 +77,7 @@ class RobotHomeState extends State<RobotHome>
 
     // Scaffold is the screen contents for RobotHomeState
     return Scaffold(
-      appBar: AppBar(title: Text("Robot")),
+      appBar: AppBar(title: const Text("Robot")),
       body: Column(
         children: [
           grid2,
@@ -86,19 +88,19 @@ class RobotHomeState extends State<RobotHome>
               // Content inside child is what is displayed on the button
               FloatingActionButton(
                 onPressed: () => robotMove("up"),
-                child: Text("up"),
+                child: const Text("up"),
               ),
               FloatingActionButton(
                 onPressed: () => robotMove("down"),
-                child: Text("down"),
+                child: const Text("down"),
               ),
               FloatingActionButton(
                 onPressed: () => robotMove("left"),
-                child: Text("left"),
+                child: const Text("left"),
               ),
               FloatingActionButton(
                 onPressed: () => robotMove("right"),
-                child: Text("right"),
+                child: const Text("right"),
               ),
             ],
           ),

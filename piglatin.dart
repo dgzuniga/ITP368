@@ -1,16 +1,16 @@
 import "package:flutter/material.dart";
 
 void main6()
-{ runApp(PigLatin());
+{ runApp(const PigLatin());
 }
 
 class PigLatin extends StatelessWidget
 {
-  PigLatin({super.key});
+  const PigLatin({super.key});
 
   @override
   Widget build(BuildContext context)
-  { return MaterialApp
+  { return const MaterialApp
     ( title: "whatEVER",
       home: PigHome(),
     );
@@ -19,6 +19,8 @@ class PigLatin extends StatelessWidget
 
 class PigHome extends StatefulWidget
 {
+  const PigHome({super.key});
+
   @override
   State<PigHome> createState() => PigHomeState();
 }
@@ -30,7 +32,7 @@ class PigHomeState extends State<PigHome>
   @override
   Widget build( BuildContext context )
   { return Scaffold
-    ( appBar: AppBar(title:Text("Pig Latin")),
+    ( appBar: AppBar(title:const Text("Pig Latin")),
       body: Column
       ( children:
         [ Text(saying),
@@ -47,7 +49,7 @@ class PigHomeState extends State<PigHome>
                 }
               );
             },
-            child: Text("do it"),
+            child: const Text("do it"),
           ),
         ],
       ),

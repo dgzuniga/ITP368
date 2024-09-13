@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'piglatin.dart';
 void main7() {
-  runApp(PigLatin());
+  runApp(const PigLatin());
 }
 
 class MyApp extends StatelessWidget {
