@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Barrett Koster
 // Your Name Here (replace mine, this is just demos
 // of stuff anyone can use).
