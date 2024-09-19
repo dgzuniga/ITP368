@@ -1,7 +1,3 @@
-// Barrett Koster
-// Your Name Here (replace mine, this is just demos
-// of stuff anyone can use).
-
 import 'package:flutter/material.dart';
 import 'dart:math'; // For random number generation
 
@@ -78,6 +74,11 @@ class YahtzeeHomeState extends State<YahtzeeHome> {
     );
   }
 
+  // Function to calculate the total of the dice values
+  int getTotal() {
+    return diceValues.reduce((sum, element) => sum + element);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,6 +88,11 @@ class YahtzeeHomeState extends State<YahtzeeHome> {
           ElevatedButton(
             onPressed: rollAllDice,
             child: Text("Roll All"),
+          ),
+          SizedBox(height: 20), // Add some space
+          Text(
+            'Total: ${getTotal()}',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
           Spacer(),
           Row(
@@ -101,4 +107,5 @@ class YahtzeeHomeState extends State<YahtzeeHome> {
     );
   }
 }
+
 
