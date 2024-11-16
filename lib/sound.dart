@@ -12,7 +12,7 @@ class SayWhat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Flutter Soundboard"
+      title: "Flutter Soundboard",
       home: MultiBlocProvider(
         providers: List.generate(
           5,
